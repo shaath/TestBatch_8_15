@@ -1,0 +1,30 @@
+package testNG;
+
+import org.testng.annotations.Test;
+
+public class AnnotationsEg {
+
+	@Test(priority = 0)
+	public void Function1()
+	{
+		System.out.println("This is Function1 code");
+	}
+	
+	@Test(priority = 1)
+	public void Function2()
+	{
+		System.out.println("This is Function2 code");
+	}
+	
+	@Test(enabled = false)
+	public void Function3()
+	{
+		System.out.println("This is Function3 code");
+	}
+	
+	@Test(priority = 3)
+	public void Apple()
+	{
+		System.out.println("This is Apple Code");
+	}
+}

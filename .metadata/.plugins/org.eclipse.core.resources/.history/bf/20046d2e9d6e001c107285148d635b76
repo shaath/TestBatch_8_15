@@ -1,0 +1,50 @@
+package testNG;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.time.Duration;
+import java.util.Properties;
+
+import methods.GenericMethods;
+
+import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
+
+public class TestNGMaster {
+	public String br = "Firefox";
+	public String url = "http://orangehrm.qedgetech.com";
+	public String u = "Admin", p = "Qedge123!@#";
+	public String prPath = "D:\\TestBatch_8_15_AM\\Workspace\\SeleniumProject\\src\\com\\SeleniumProject\\properties\\OrgHRM.properties";
+	public String expval, actval;
+	public GenericMethods gm;
+	public FileInputStream fi;
+	public Properties pr;
+	
+	@BeforeTest
+	public void org_Launch() throws IOException
+	{
+		fi = new FileInputStream(prPath);
+		pr = new Properties();
+		pr.load(fi);
+		
+		expval = "LOGIN";
+		
+		gm = new GenericMethods();
+		gm.br_Launch(br);
+		gm.driver.get(url);
+		gm.driver.manage().window().maximize();
+		gm.driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		
+		actval = gm.driver.findElement(By.id(pr.getProperty("login"))).getAttribute("value");
+		
+		Assert.assertEquals(actval, expval, "Launch is failed");
+	}
+	
+	@BeforeClass
+	public void org_Login()
+	{
+		
+	}
+}

@@ -1,0 +1,25 @@
+package testNG;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import methods.GenericMethods;
+
+import org.testng.annotations.BeforeTest;
+
+public class TestNGMaster {
+
+	public String url = "http://orangehrm.qedgetech.com";
+	public String u = "Admin", p = "Qedge123!@#";
+	public String prPath = "D:\\TestBatch_8_15_AM\\Workspace\\SeleniumProject\\src\\com\\SeleniumProject\\properties\\OrgHRM.properties";
+	public String expval, actval;
+	public GenericMethods gm;
+	public FileInputStream fi;
+	public Properties pr;
+	
+	@BeforeTest
+	public void org_Launch()
+	{
+		
+	}
+}

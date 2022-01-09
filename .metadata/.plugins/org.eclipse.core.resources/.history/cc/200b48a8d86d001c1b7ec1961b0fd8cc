@@ -1,0 +1,12 @@
+package testNG;
+
+import org.testng.annotations.BeforeClass;
+
+public class PrimusBankLogin {
+
+	@BeforeClass
+	public void Launch_br()
+	{
+		
+	}
+}

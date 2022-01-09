@@ -1,0 +1,19 @@
+package dataDriven;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelopsEg {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		String strPath = "D:\\TestBatch_8_15_AM\\Workspace\\SeleniumProject\\src\\testdata\\TestData.xlsx";
+		FileInputStream fi = new FileInputStream(strPath);
+		
+		XSSFWorkbook wb = new XSSFWorkbook(fi);
+
+	}
+
+}

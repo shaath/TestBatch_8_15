@@ -1,0 +1,26 @@
+package com.SeleniumProject.javaprogrammes;
+
+public class MethodsEg {
+
+	public static void main(String[] args) {
+		
+		method1();
+		String res = method2();
+		
+
+	}
+
+	// static method without return any value
+	public static void method1()
+	{
+		System.out.println("THis is method1 code");
+	}
+	
+	// static method with return value
+	public static String method2()
+	{
+		System.out.println("This is method2 code");
+		return "Pass";
+	}
+	
+}

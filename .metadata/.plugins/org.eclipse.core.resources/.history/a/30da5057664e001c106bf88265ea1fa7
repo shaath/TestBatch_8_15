@@ -1,0 +1,11 @@
+package com.SeleniumProject.javaprogrammes;
+
+public class MethodsEg {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

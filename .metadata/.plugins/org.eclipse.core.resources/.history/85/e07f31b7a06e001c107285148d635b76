@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OrgHRMSuite">
+  <test name="Test cases">
+    <classes>	
+      <class name="testNG.EmpReg_TC_TestNG"/>
+      <class name="testNG.UserReg_TC_TestNG"/>
+    </classes>
+  </test> <!-- Test -->
+
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
